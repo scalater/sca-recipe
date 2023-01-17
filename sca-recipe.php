@@ -19,6 +19,15 @@ namespace SCALATER\Recipes;
 
 defined( 'ABSPATH' ) || exit;
 
+require_once __DIR__ . 'bootstrap.php';
+
+use function SCALATER\Framework\init_plugin;
+
+if ( ! init_plugin( __NAMESPACE__, __FILE__ ) ) {
+	return;
+}
+
+
 
 
 
