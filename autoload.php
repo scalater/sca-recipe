@@ -1,11 +1,11 @@
 <?php
 
-namespace SCALATER\Framework;
+namespace SCALATER\Recipes;
 
 function autoload( $class ) {
 	global $sca_autoload_namespaces;
 
-	if ( strpos( $class, 'NHG\\' ) !== 0 || empty( $sca_autoload_namespaces ) ) {
+	if ( strpos( $class, 'SCALATER\\' ) !== 0 || empty( $sca_autoload_namespaces ) ) {
 		return;
 	}
 

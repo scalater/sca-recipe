@@ -1,6 +1,6 @@
 <?php
 
-namespace SCALATER\Framework;
+namespace SCALATER\Recipes;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -28,7 +28,7 @@ function check_dependencies_met( $namespace ) {
 
 	$missing = [];
 	$hash    = [
-		'acf' => 'advanced-custom-fields-pro/acf.php',
+		'acf' => 'advanced-custom-fields/acf.php',
 		'woocommerce' => 'woocommerce/woocommerce.php',
 	];
 
@@ -39,7 +39,7 @@ function check_dependencies_met( $namespace ) {
 			$dependency = $hash[ $dependency ];
 		}
 
-		if ( 'nhg-' === substr( $dependency, 0, 4 ) ) {
+		if ( 'sca-' === substr( $dependency, 0, 4 ) ) {
 			$dependency = "$dependency/$dependency.php";
 		}
 

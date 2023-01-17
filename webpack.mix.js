@@ -3,10 +3,9 @@ const assetsPath = 'assets';
 const distributionPath = 'assets';
 
 mix.setPublicPath(`${distributionPath}`);
-mix.sass(`${assetsPath}/scss/styles.scss`, `${distributionPath}/css`).sourceMaps();
-mix.js(`${assetsPath}/js/script.js`, `${distributionPath}/js`);
+mix.sass(`${assetsPath}/scss/sca-recipes.scss`, `${distributionPath}/css`).sourceMaps();
 
 mix.minify([
-  `${distributionPath}/css/styles.css`,
-  `${distributionPath}/js/script.js`,
+  `${distributionPath}/css/sca-recipes.css`,
+  `${distributionPath}/js/sca-recipes.js`,
 ]);

@@ -1,13 +1,11 @@
 <?xml version="1.0"?>
-<ruleset name="NHG">
+<ruleset name="SCALATER">
 
 	<file>.</file>
 
 	<!-- Exclude paths -->
 	<exclude-pattern>*/node_modules/*</exclude-pattern>
 	<exclude-pattern>*/vendor/*</exclude-pattern>
-
-	<exclude-pattern>nhg-price-history/assets/js/chart.js</exclude-pattern>
 
 	<!-- Only work with php files -->
 	<arg name="extensions" value="php" />
