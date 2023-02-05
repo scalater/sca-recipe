@@ -11,6 +11,8 @@ namespace SCALATER\Recipes;
 
 defined( 'ABSPATH' ) || exit;
 
+use SCALATER\Recipes\Traits\Singleton;
+
 /**
  * Class Post
  *

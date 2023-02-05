@@ -1,6 +1,6 @@
 <?php
 
-namespace SCALATER\Recipes;
+namespace SCALATER\Recipes\Traits;
 
 defined( 'ABSPATH' ) || exit;
 

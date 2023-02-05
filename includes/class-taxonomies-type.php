@@ -9,6 +9,8 @@
 
 namespace SCALATER\Recipes;
 
+use SCALATER\Recipes\Traits\Singleton;
+
 defined( 'ABSPATH' ) || exit;
 
 /**
