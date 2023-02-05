@@ -59,13 +59,21 @@ function add_to_autoload_namespaces( $namespace, $load_path ) {
 	);
 }
 
-function init_plugin( $namespace, $filename ) {
+function init_plugin( $namespace, $filename, $slug ) {
 
 	if ( ! check_dependencies_met( $namespace ) ) {
 		return false;
 	}
 
 	add_to_autoload_namespaces( $namespace, dirname( $filename ) );
+
+	define( $namespace . '\URL', plugins_url( '/', __DIR__ . DIRECTORY_SEPARATOR . $slug . '.php' ) );
+	define( $namespace . '\HANDLE', $slug );
+
+	add_action( 'plugins_loaded', function () use ( $slug ) {
+		load_plugin_textdomain( $slug, false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+		do_action( 'scalater/plugin_loaded' );
+	}, 999 );
 
 	return true;
 }

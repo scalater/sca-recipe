@@ -41,7 +41,7 @@ class Base {
 	 * @return string
 	 */
 	final public static function get_slug(): string {
-		return 'sca-recipes';
+		return constant( __NAMESPACE__ . '\HANDLE' );
 	}
 
 	/**
@@ -94,6 +94,17 @@ class Base {
 	 */
 	final public static function get_templates_path(): string {
 		return self::get_path() . DIRECTORY_SEPARATOR . 'templates' . DIRECTORY_SEPARATOR;
+	}
+
+	/**
+	 * Generate a scope error log
+	 *
+	 * @param string $message
+	 */
+	public static function error_log( string $message ) {
+		if ( ! empty( $message ) ) {
+			error_log( self::get_slug() . ' -- ' . $message );
+		}
 	}
 
 	/**

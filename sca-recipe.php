@@ -45,9 +45,8 @@ defined( 'ABSPATH' ) || exit;
 require_once 'bootstrap.php';
 
 const DEPENDENCIES = [ 'woocommerce', 'acf' ];
-const NAME = 'Recipe Revolution';
 
-if ( ! init_plugin( __NAMESPACE__, __FILE__ ) ) {
+if ( ! init_plugin( __NAMESPACE__, __FILE__, 'sca-recipe' ) ) {
 	return;
 }
 
